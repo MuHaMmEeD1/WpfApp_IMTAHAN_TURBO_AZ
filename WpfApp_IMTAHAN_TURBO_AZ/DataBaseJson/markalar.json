@@ -1,0 +1,42 @@
+[
+  {
+    "MarkaName": "Toyota",
+    "Models": [ "Corolla", "Camry", "Rav4" ]
+  },
+  {
+    "MarkaName": "Honda",
+    "Models": [ "Civic", "Accord", "CR-V" ]
+  },
+  {
+    "MarkaName": "Ford",
+    "Models": [ "Focus", "Fiesta", "Mustang" ]
+  },
+  {
+    "MarkaName": "Chevrolet",
+    "Models": [ "Cruze", "Malibu", "Silverado" ]
+  },
+  {
+    "MarkaName": "Mercedes-Benz",
+    "Models": [ "C-Class", "E-Class", "S-Class" ]
+  },
+  {
+    "MarkaName": "BMW",
+    "Models": [ "3 Series", "5 Series", "7 Series" ]
+  },
+  {
+    "MarkaName": "Audi",
+    "Models": [ "A3", "A4", "A6" ]
+  },
+  {
+    "MarkaName": "Tesla",
+    "Models": [ "Model 3", "Model S", "Model X" ]
+  },
+  {
+    "MarkaName": "Nissan",
+    "Models": [ "Altima", "Maxima", "Rogue" ]
+  },
+  {
+    "MarkaName": "Hyundai",
+    "Models": [ "Elantra", "Sonata", "Santa Fe" ]
+  }
+]

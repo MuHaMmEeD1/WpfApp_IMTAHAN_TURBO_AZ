@@ -1,0 +1,435 @@
+﻿<Page x:Class="WpfApp_IMTAHAN_TURBO_AZ.View.Pages.MainPageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp_IMTAHAN_TURBO_AZ.View.Pages"
+      xmlns:Mt="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:usercontrols="clr-namespace:WpfApp_IMTAHAN_TURBO_AZ.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1800"  Background="White"
+      Title="MainPageView" Name="Base">
+
+    <Grid>
+
+
+
+        <Grid.Resources>
+
+
+            <ControlTemplate TargetType="Button" x:Key="ButtonRedForgronud">
+
+                <Border>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Foreground" Value="#ca1016" />
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="Foreground" Value="#9b94b4" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+
+            <ControlTemplate TargetType="Button" x:Key="ButtonRedForgronudAndForegrondBlack">
+
+                <Border>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+
+                <ControlTemplate.Triggers>
+
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Foreground" Value="#ca1016" />
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="Foreground" Value="black" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+
+            </ControlTemplate>
+
+            <ControlTemplate TargetType="Button" x:Key="ButtonOpesydeForgronud">
+
+                <Border CornerRadius="3" Background="{TemplateBinding Background}">
+
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Opacity" Value="0.8" />
+                    </Trigger>
+
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+
+            <ControlTemplate TargetType="Button" x:Key="ButtonGreenForgronud">
+
+                <Border Name="br" Background="{TemplateBinding Background}" CornerRadius="5">
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+
+                <ControlTemplate.Triggers>
+                    <Trigger  Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#7EB421" />
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="Background" Value="#7ed321" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+                
+            </ControlTemplate>
+
+        </Grid.Resources>
+
+        <Grid 
+             
+            Background="#f6f7fa"
+            Height="35"
+            VerticalAlignment="Top" Grid.ColumnSpan="2"
+            >
+
+
+            <Button 
+                
+                Content="Tap.az"
+                
+                Width="40"
+                Height="19"
+                Padding="0"
+                Background="Transparent"
+                Margin="340 0 0 0"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                
+                    Template="{DynamicResource ButtonRedForgronud}"
+                
+                >
+
+
+            </Button>
+
+
+            <Button 
+                
+                Content="Bina.az"
+                
+                Width="45"
+                Height="19"
+                Padding="0"
+                Background="Transparent"
+                Margin="400 2 0 0"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                
+                    Template="{DynamicResource ButtonRedForgronud}"
+                
+                >
+
+
+            </Button>
+
+            <Button 
+                
+                Content="Boss.az"
+                
+                Width="46"
+                Height="19"
+                Padding="0"
+                Background="Transparent"
+                Margin="465 2 0 0"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                
+                    Template="{DynamicResource ButtonRedForgronud}" 
+                
+                >
+
+
+            </Button>
+
+            <Label 
+                    
+                    Content="Dəstək:"
+                    Margin="750 6 0 0"
+                    HorizontalAlignment="Left"
+                    Foreground="Black"
+                    FontWeight="DemiBold"
+                    
+                    />
+
+            <Button 
+                
+                Content="(012) 505-77-55"
+                
+                Width="100"
+                Height="19"
+                Padding="0"
+                Background="Transparent"
+                Margin="805 2 0 0"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                
+                    
+                    Template="{DynamicResource ButtonRedForgronudAndForegrondBlack}" 
+                
+                >
+
+
+            </Button>
+
+            <Button 
+                
+                Content="Yardım"
+                
+                Width="44"
+                Height="19"
+                Padding="0"
+                Background="Transparent"
+                Margin="930 2 0 0"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                
+                    Template="{DynamicResource ButtonRedForgronud}" 
+                
+                >
+
+
+            </Button>
+
+            <Button 
+                
+                Content="RU"
+                
+                Width="20"
+                Height="19"
+                Padding="0"
+                Background="Transparent"
+                Margin="1000 2 0 0"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                
+                    Template="{DynamicResource ButtonRedForgronud}" 
+                
+                >
+
+
+            </Button>
+
+            <Button 
+                
+             
+                
+                Width="87"
+                Height="19"
+                Padding="0"
+                Background="Transparent"
+                Margin="1045 2 0 0"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                
+                    Template="{DynamicResource ButtonRedForgronud}" 
+                
+                >
+                <Grid>
+                    <Mt:PackIcon Kind="Heart" Margin="0 2 0 0" />
+                    <TextBlock 
+                            Text="Seçilmişlər" 
+                            VerticalAlignment="Center" 
+                            Margin="19 0 0 0" />
+                </Grid>
+
+
+            </Button>
+
+            <Button 
+                
+             
+                
+                Width="51"
+                Height="19"
+                Padding="0"
+                Background="Transparent"
+                Margin="1155 2 0 0"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                Command="{Binding GirisCommand}"
+                    Template="{DynamicResource ButtonRedForgronud}" 
+                CommandParameter="{Binding ElementName=Base}"
+                >
+                <Grid>
+                    <Mt:PackIcon Kind="AccountCircle" 
+                                     Margin="0 0 0 0"
+                                     Height="20"
+                                     Width="20"
+                                     />
+                    <TextBlock 
+                            Text="Giriş" 
+                            VerticalAlignment="Center" 
+                            Margin="23 0 0 0" />
+                </Grid>
+
+
+            </Button>
+
+
+
+
+
+
+
+        </Grid>
+
+
+        <Grid 
+             
+            Background="#ca1016"
+            Height="50"
+            VerticalAlignment="Top"
+            Margin="0 35 0 0" Grid.ColumnSpan="2"
+
+              >
+
+
+            <Button 
+                
+                Content="TURBO.AZ"
+                
+                Width="80"
+                Height="19"
+                Padding="0"
+                Background="Transparent"
+                Margin="337 0 0 0"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                FontSize="16"
+                FontWeight="Bold" 
+                Foreground="White"
+                >
+
+
+            </Button>
+
+            <Button 
+                
+                Content="Bütün Elanlar"
+                
+                Width="85"
+                Height="19"
+                Padding="0"
+                Background="Transparent"
+                Margin="460 2 0 0"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                Foreground="#FCFCFC"
+                    
+                    
+                    Template="{DynamicResource ButtonOpesydeForgronud}" 
+                
+                >
+
+
+            </Button>
+
+            <Button 
+                
+                    Content="Salonlar"
+                
+                    Width="54"
+                    Height="19"
+                    Padding="0"
+                    Background="Transparent"
+                    Margin="580 2 0 0"
+                    HorizontalAlignment="Left"
+                    BorderThickness="0"
+                    Foreground="#FCFCFC"
+                    
+                    
+                    Template="{DynamicResource ButtonOpesydeForgronud}" 
+                
+                />
+
+            <Button 
+                
+                    Content="Moto"
+                
+                    Width="39"
+                    Height="19"
+                    Padding="0"
+                    Background="Transparent"
+                    Margin="670 2 0 0"
+                    HorizontalAlignment="Left"
+                    BorderThickness="0"
+                    Foreground="#FCFCFC"
+                    
+                    
+                    Template="{DynamicResource ButtonOpesydeForgronud}" 
+                
+                />
+
+
+
+
+            <Button 
+                
+                 
+                
+                    Width="87"
+                    Height="32"
+                    Padding="0"
+                   
+                    Margin="1110 2 0 0"
+                    HorizontalAlignment="Left"
+                    BorderThickness="0"
+                    Template="{DynamicResource ButtonGreenForgronud}"
+                    Command="{Binding YeniElanCommand}"
+                   
+            >
+                <Grid>
+                    <Mt:PackIcon Kind="PlusCircleOutline" Margin="0 2 0 0" />
+                    <TextBlock 
+                        Text="Yeni elan" 
+                        VerticalAlignment="Center" 
+                        Margin="19 0 0 0" />
+
+                </Grid>
+
+
+            </Button>
+
+
+
+
+
+
+
+        </Grid>
+
+
+
+
+        <Frame 
+            Height="1000" 
+            VerticalAlignment="Top" 
+            Margin="0 85 0 0" 
+            Source="HomeView.xaml"/>
+
+        <usercontrols:Button_ComboBox
+                    
+                    Margin="160 47 0 0"
+                    Height="480"
+                    Width="225"
+                    
+                    VerticalAlignment="Top" 
+                    >
+
+        </usercontrols:Button_ComboBox>
+
+
+
+
+    </Grid>
+</Page>

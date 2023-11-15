@@ -1,0 +1,174 @@
+﻿<UserControl x:Class="WpfApp_IMTAHAN_TURBO_AZ.UserControls.Button_ComboBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp_IMTAHAN_TURBO_AZ.UserControls"
+             xmlns:Mt="http://materialdesigninxaml.net/winfx/xaml/themes"
+             
+             mc:Ignorable="d" Name="Base"
+             d:DesignHeight="480" d:DesignWidth="400">
+    <Grid>
+
+
+
+
+
+
+
+
+
+
+        <Border
+            
+            Margin="0 0 0 15"
+            Background="White"
+            CornerRadius="10"
+            
+            
+            VerticalAlignment="Bottom"
+            
+            >
+            <ListBox 
+            
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Top"
+                
+            
+            
+            Background="Transparent"
+            Name="listbox"
+            HorizontalContentAlignment="Center"
+            Width="{Binding ElementName=Base, Path=Width}"
+          
+            MouseLeave="btn_MouseLeave"
+           
+            >
+
+            <Button
+            
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Content="Aksesuarlar" Foreground="Black"
+            >
+            </Button>
+
+            <Button
+            
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Content="Audio və video texnika" Foreground="Black"
+            >
+            </Button>
+
+            <Button
+            
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Content="Avtokosmetika ve avtokimya" Foreground="Black"
+            >
+            </Button>
+
+
+            <Button
+            
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Content="Ehtiyat hisselr" Foreground="Black"
+            >
+            </Button>
+
+            <Button
+            
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Content="GPS navigatorlar" Foreground="Black"
+            >
+            </Button>
+
+            <Button
+            
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Content="Qeydiyyat nişanları" Foreground="Black"
+            >
+            </Button>
+
+            <Button
+            
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Content="Siqnalizasiyalar" Foreground="Black"
+            >
+            </Button>
+
+
+            <Button
+            
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Content="Şinlər, diskləl və təkərlər"
+                    Foreground="Black"  
+            >
+            </Button>
+
+            <Button
+            
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Content="Digər"
+                    Foreground="Black"
+            >
+            </Button>
+
+
+        </ListBox>
+        
+        </Border>
+    
+        <Button
+            
+            Name="btn"
+            Background="{Binding ElementName=Base, Path=Background}"
+            Height="30"
+            Width="{Binding ElementName=Base, Path=Width}"
+            Content="Ehtiyat hissələr və aksesuarlar"
+            BorderThickness="0"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Top"
+            
+            MouseEnter="btn_MouseEnter"
+            
+            
+            >
+
+
+        </Button>
+
+
+
+        <Label 
+            Height="40"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            MouseLeave="btn_MouseLeave"
+            
+               ></Label>
+        <Label 
+            Height="40"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            MouseLeave="btn_MouseLeave"
+               ></Label>
+        <Label 
+            Height="5"
+            VerticalAlignment="Top"
+            MouseLeave="btn_MouseLeave"
+               ></Label>
+
+
+
+
+    </Grid>
+</UserControl>
