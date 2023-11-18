@@ -238,7 +238,7 @@
                 BorderThickness="0"
                 
                     Template="{DynamicResource ButtonRedForgronud}" 
-                
+                    Command="{Binding SecilmislerCommand}"
                 >
                 <Grid>
                     <Mt:PackIcon Kind="Heart" Margin="0 2 0 0" />
@@ -404,7 +404,8 @@
                     <Mt:PackIcon Kind="PlusCircleOutline" Margin="0 2 0 0" />
                     <TextBlock 
                         Name="YeniElanTextBlock"
-                        Text="Yeni elan" 
+                        Text="Bağlıdı" 
+
                         VerticalAlignment="Center" 
                         Margin="19 0 0 0" />
 

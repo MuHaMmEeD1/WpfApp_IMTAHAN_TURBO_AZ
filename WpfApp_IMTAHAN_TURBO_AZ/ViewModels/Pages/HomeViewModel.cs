@@ -32,6 +32,9 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
         public RealeCommand HamsiCommand { get; set; }
         public RealeCommand YeniCommand { get; set; }
         public RealeCommand SurulmusCommand { get; set; }
+        public RealeCommand SifirlaCommand { get; set; }
+
+
         public int HamsiIndex { get; set; } = 0;
 
         public ObservableCollection<Car> CarsEsas { get; set; }
@@ -54,7 +57,7 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
 
         
 
-        public HomeViewModel(Frame Base)
+        public HomeViewModel(Frame Base, ObservableCollection<Car> cars = null!, bool secilmis = false)
         {
             this.Base = Base;
 
@@ -64,14 +67,26 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
             HamsiCommand = new RealeCommand(_HamsiCommand);
             YeniCommand = new RealeCommand(_YeinCommand);
             SurulmusCommand = new RealeCommand(_SurulmusCommand);
+            SifirlaCommand = new RealeCommand(_SifirlaCommand);
 
 
+           
 
-            Cars = new ObservableCollection<Car>();
             CarsEsas = new ObservableCollection<Car>();
-
-            Cars = JsonSerializer.Deserialize<ObservableCollection<Car>>(File.ReadAllText("../../../DataBaseJson/cars.json"))!;
             CarsEsas = JsonSerializer.Deserialize<ObservableCollection<Car>>(File.ReadAllText("../../../DataBaseJson/cars.json"))!;
+
+            if (secilmis)
+            {
+                Cars = new ObservableCollection<Car>();
+                Cars = cars;
+            }
+            else
+            {
+                Cars = new ObservableCollection<Car>();
+                Cars = JsonSerializer.Deserialize<ObservableCollection<Car>>(File.ReadAllText("../../../DataBaseJson/cars.json"))!;
+            }
+
+
 
             for (int i = 0; i < Cars.Count; i++)
             {
@@ -128,58 +143,6 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
 
 
 
-            #region elave bax
-            //List<Car> cars = new List<Car>();
-
-
-            //for (int i = 0; i < 20; i++)
-            //{
-
-            //    cars.Add(new Car()
-            //    {
-
-            //        Seher = "Baki",
-            //        Marka = "Lada",
-            //        Model = "Lada12",
-            //        BuraxlisIli = "2020",
-            //        BanNovu = "Masin",
-            //        Reng = "Sari",
-            //        Muherik = "1300",
-            //        Yurus = "30000",
-            //        SuretQutusu = "Mexaniki",
-            //        Otrucu = "On",
-            //        Yeni = true,
-            //        YreSayi = 3,
-            //        Veziyyet = 2,
-            //        Qimet = 44000,
-            //        NecenciSahib = 3,
-            //        ElaveMelumat = "Super",
-            //        AvSecimler = "Yüngül lehimli disklərABSLyukYağış sensoruMərkəzi qapanmaPark radarı",
-            //        Images = new List<string>() { "Images/foto1.png", "Images/foto1.1.png" },
-            //        PImage = "Images/foto1.png",
-            //        Elaqe = new Elaqe() { Ad = "Ad", Email = "gmail@gmail.com", Seher = "Sumqayit", Telefon = "(012) 505-77-55\r\n" },
-            //        VIN_Kod = "HJ2K1OS9",
-            //        Beyen = true,
-            //        Vip = true,
-            //        PulVahidi = "AZE",
-            //        PDataTime = $"{DateTime.Now.ToShortDateString()}",
-            //        HBazar = "Azərbaycan",
-            //        MuherikGucu = 3,
-            //        YanacaqNovu = "Bezin",
-            //        ElanIndex = cars.Count 
-
-
-
-
-
-            //    }) ;
-
-            //}
-
-
-            //File.WriteAllText("../../../DataBaseJson/cars.json", JsonSerializer.Serialize(cars, new JsonSerializerOptions() { WriteIndented = true }));
-
-            #endregion
 
 
 
@@ -383,10 +346,37 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
 
             esas!.SurulmusButton.Background = new SolidColorBrush(Color.FromRgb((byte)202, (byte)16, (byte)22));
             esas!.SurulmusButton.Foreground = Brushes.White;
-
+            
             esas!.HamsiButton.Background = Brushes.White;
             esas!.HamsiButton.Foreground = Brushes.DarkGray;
         }
+
+
+
+
+
+
+
+
+
+        public void _SifirlaCommand(object? par)
+        {
+
+            HomeView homeView = new HomeView(Base);
+
+            homeView.DataContext = new HomeViewModel(Base);
+
+            Base.Content = homeView;
+
+
+        }
+
+
+
+
+
+
+
 
 
 

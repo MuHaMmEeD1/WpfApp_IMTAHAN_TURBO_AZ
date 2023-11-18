@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WpfApp_IMTAHAN_TURBO_AZ.View.Pages"
       xmlns:Mt="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="1000" d:DesignWidth="800"
+      d:DesignHeight="2000" d:DesignWidth="1000"
       Title="CarView" Background="White" >
 
     <Grid>
@@ -58,7 +58,7 @@
                 
                 
                      VerticalAlignment="Top"
-                     Height="1300"
+                     
                      Width="900"
                      Margin="60 10 0 0"
                 >
@@ -305,6 +305,16 @@
 
                 <StackPanel Margin="0 50 0 0">
 
+                    <Label 
+                                Content="Maşın haqqında"
+                                Foreground="Black"            
+                    
+                                FontSize="28"
+                                
+                                Margin="0 20 0 10"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
 
                     <Grid Width="600" HorizontalAlignment="Left">
 
@@ -577,7 +587,7 @@
                                 Grid.Column="0"
                                 />
                         <Label 
-                                Content="Yoxdu"
+                                Content="{Binding Car.Reng}"
                               
                                 FontSize="18"
                                 Foreground="Black"
@@ -701,11 +711,77 @@
 
 
                 </StackPanel>
+
+
+
+                <Label 
+                                Content="Elavə məlumat"
+                                Foreground="Black"            
+                    
+                                FontSize="28"
+                                
+                                Margin="0 20 0 10"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
+
+                <TextBox
+                            x:Name="ElaveMelumatTextBox"
+                            
+                            Grid.Column="1"
+                    
+                            FontSize="12"
+                            FontWeight="DemiBold"
+                            VerticalScrollBarVisibility="Auto"
+                            AcceptsReturn="True"
+                            AcceptsTab="True"
+                            TextWrapping="Wrap" 
+                            BorderThickness="0"
+                            Padding="5"        
+                            IsEnabled="False"        
+                    
+                            HorizontalAlignment="Left"
+                            Text="{Binding Car.ElaveMelumat}"
+                            
+                            Width="500"
+                            />
+
+
+                <Label 
+                                Content="Avtomobilin təchizatı"
+                                Foreground="Black"            
+                    
+                                FontSize="28"
+                                
+                                Margin="0 20 0 10"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
+
+                <TextBox
+                           
+                            
+                            Grid.Column="1"
+                    
+                            FontSize="12"
+                            FontWeight="DemiBold"
+                            VerticalScrollBarVisibility="Auto"
+                            AcceptsReturn="True"
+                            AcceptsTab="True"
+                            TextWrapping="Wrap" 
+                            BorderThickness="0"
+                            Padding="5"        
+                            IsEnabled="False"        
+                    
+                            HorizontalAlignment="Left"
+                            Text="{Binding Car.AvSecimler}"
+                            
+                            Width="500"
+                            />
+
+
+                <Grid Height="400"></Grid>                
                 
-            
-                
-            
-            
             </StackPanel>
 
         </ScrollViewer>

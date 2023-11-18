@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -21,9 +23,13 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
     public class MainPageViewModel
     {
        
+        public MainPageView Base { get; set; }
+
+
         public RealeCommand GirisCommand { get; set; }
         public RealeCommand YeniElanCommand { get; set; }   
         public RealeCommand ButunElanlarCommand { get; set; }   
+        public RealeCommand SecilmislerCommand { get; set; }   
 
         public RealeCommand TapAzCommand { get; set; }   
         public RealeCommand BinaAzCommand { get; set; }   
@@ -33,12 +39,21 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
 
         public int GIndex { get; set; } = JsonSerializer.Deserialize<int>(File.ReadAllText("../../../DataBaseJson/index.json"));
 
-        public MainPageViewModel()
+      
+
+
+
+        public MainPageViewModel(MainPageView Base)
         {
+            this.Base = Base; 
+
+
+          
 
             TapAzCommand = new RealeCommand(_TapAzCommand);
             BinaAzCommand = new RealeCommand(_BinaAzCommand);
             BossAzCommand = new RealeCommand(_BossAzCommand);
+            SecilmislerCommand = new RealeCommand(_SecilmislerCommand);
 
             CL = new Client();
 
@@ -47,6 +62,29 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
             ButunElanlarCommand = new RealeCommand(_ButunElanlarCommand);
 
             GIndex = JsonSerializer.Deserialize<int>(File.ReadAllText("../../../DataBaseJson/index.json"));
+
+            if(GIndex != -1) {
+
+                List<Client> clients = new List<Client>();
+
+                clients = JsonSerializer.Deserialize<List<Client>>(File.ReadAllText("../../../DataBaseJson/clients.json"))!;
+
+                CL = clients[GIndex];
+
+                if (CL.Nov == "Admin")
+                {
+                    Base.YeniElanTextBlock.Text = "Idarə";
+                }
+                else if (CL.Nov == "Satici")
+                {
+                    Base.YeniElanTextBlock.Text = "Yeni elan";
+
+                }
+                else { Base.YeniElanTextBlock.Text = "Bağlıdı"; }
+
+
+            }
+
         }
 
 
@@ -81,6 +119,10 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
 
             var p = (par as MainPageView);
 
+            if (GIndex == -1) { return false; }
+
+            
+
             if (CL.Nov == "Admin")
             {
                 p!.YeniElanTextBlock.Text = "Idarə";
@@ -93,7 +135,7 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
             else { p!.YeniElanTextBlock.Text = "Bağlıdı"; }
 
 
-            if (GIndex == -1) { return false; }
+            
 
             return true;
 
@@ -135,7 +177,7 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
 
 
 
-        }  // bos bunu yaz
+        }  
 
 
 
@@ -176,6 +218,53 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
 
             });
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public void _SecilmislerCommand(object? parametr)
+        {
+
+            var Cars = new ObservableCollection<Car>();
+
+            var cs = new List<Car>();
+
+            cs = JsonSerializer.Deserialize<List<Car>>(File.ReadAllText("../../../DataBaseJson/cars.json"))!;
+
+          
+            for (int i = 0; i < cs.Count; i++)
+            {
+                
+                if (cs[i].Beyen)
+                {
+                    Cars.Add(cs[i]);
+                }
+            }
+
+            
+            HomeView homeView = new HomeView(Base.EsasSeyfe, Cars, true);
+
+
+            Base.EsasSeyfe.Content = homeView;
+
+
+
+        }
+
+
+
+
 
 
     }

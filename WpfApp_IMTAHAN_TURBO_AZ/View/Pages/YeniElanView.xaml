@@ -696,7 +696,7 @@
                             AcceptsTab="True"
                             TextWrapping="Wrap" 
                             BorderThickness="1"
-                           
+                            Padding="5" 
                             
                             />
 

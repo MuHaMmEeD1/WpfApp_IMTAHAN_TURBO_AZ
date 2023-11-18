@@ -29,7 +29,7 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.View.Pages
 
             EsasSeyfe.Content = new HomeView(EsasSeyfe);
 
-            DataContext = new MainPageViewModel();
+            DataContext = new MainPageViewModel(this);
         }
     }
 }
