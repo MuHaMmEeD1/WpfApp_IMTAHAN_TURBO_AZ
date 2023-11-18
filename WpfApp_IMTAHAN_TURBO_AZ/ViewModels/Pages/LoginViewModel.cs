@@ -19,7 +19,7 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
     {
 
         public RealeCommand LoginCommand { get; set; }
-       
+        public string AdminCode { get; set; } = "admin123";
 
         public int randomSay { get; set; } = Random.Shared.Next(100000, 999999);
 
@@ -42,8 +42,9 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
         {
             LoginView page = (parameter as LoginView)!;
 
+            if (page.Email.Text.Length != 0 && page.WAre.Text.Length != 0 && page.WAre.Text == "Admin" && page.VCode.Text == AdminCode) { return true; }
 
-            if(page.Email.Text.Length != 0 && page.WAre.Text.Length != 0 ) { return true; }
+            if (page.Email.Text.Length != 0 && page.WAre.Text.Length != 0 && page.WAre.Text != "Admin") { return true; }
 
             return false;
 
@@ -56,8 +57,49 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
             bool yoxla = true;
 
 
+            if (page.Email.Text.Length != 0 && page.WAre.Text.Length != 0 && page.VCode.Text == AdminCode && page.WAre.Text == "Admin")
+            {
 
-            if (page.Email.Text.Length != 0 && page.WAre.Text.Length != 0 && page.VCode.Text == Convert.ToString(randomSay)) { 
+                List<Client> clients = new List<Client>();
+
+                clients = JsonSerializer.Deserialize<List<Client>>(File.ReadAllText("../../../DataBaseJson/clients.json"))!;
+
+
+
+                if (clients.Count > 0)
+                {
+
+                    for (int i = 0; i < clients.Count; i++)
+                    {
+                        if (clients[i].Email == page.Email.Text)
+                        {
+                            clients[i].Nov = page.WAre.Text;
+
+                            File.WriteAllText("../../../DataBaseJson/index.json", JsonSerializer.Serialize(i));
+                            break;
+                        }
+                        else
+                        {
+                            clients.Add(new Client() { Email = page.Email.Text, Nov = page.WAre.Text });
+                            File.WriteAllText("../../../DataBaseJson/index.json", JsonSerializer.Serialize(clients.Count - 1));
+                        }
+                    }
+
+                }
+                else
+                {
+
+                    clients.Add(new Client() { Email = page.Email.Text, Nov = page.WAre.Text });
+                    File.WriteAllText("../../../DataBaseJson/index.json", JsonSerializer.Serialize(0));
+
+                }
+
+
+                File.WriteAllText("../../../DataBaseJson/clients.json", JsonSerializer.Serialize(clients, new JsonSerializerOptions() { WriteIndented = true }));
+
+                page.NavigationService.GoBack();
+            }
+            else if (page.Email.Text.Length != 0 && page.WAre.Text.Length != 0 && page.VCode.Text == Convert.ToString(randomSay)) { 
             
                 List<Client> clients = new List<Client>();
 

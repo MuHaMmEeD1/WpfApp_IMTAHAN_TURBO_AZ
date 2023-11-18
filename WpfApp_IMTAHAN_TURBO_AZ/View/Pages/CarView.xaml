@@ -1,0 +1,719 @@
+﻿<Page x:Class="WpfApp_IMTAHAN_TURBO_AZ.View.Pages.CarView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp_IMTAHAN_TURBO_AZ.View.Pages"
+      xmlns:Mt="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="800"
+      Title="CarView" Background="White" >
+
+    <Grid>
+
+        <Grid.Resources>
+
+            <ControlTemplate TargetType="Button" x:Key="ButtonRedForgronud">
+
+                <Border>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Foreground" Value="#ca1016" />
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="Foreground" Value="black" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+
+            <ControlTemplate TargetType="Button" x:Key="ButtonGreenForgronud">
+                <Border CornerRadius="5">
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" Value="#3db460" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#2C8246" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+            </ControlTemplate>
+
+
+
+
+        </Grid.Resources>
+        
+        
+        
+        <ScrollViewer >
+
+            <StackPanel
+                
+                
+                     VerticalAlignment="Top"
+                     Height="1300"
+                     Width="900"
+                     Margin="60 10 0 0"
+                >
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Orientation="Horizontal">
+
+                        <Label  Content="{Binding Car.Marka}"
+                        FontSize="22" FontWeight="Bold"/>
+
+                        <Label Content="{Binding Car.Model}"
+                        FontSize="22" FontWeight="Bold"/>
+
+                        <Label  Content=","  Margin="-7 0 0 0"
+                        FontSize="22" FontWeight="Bold"/>
+
+                        <Label Content="{Binding Car.MuherikGucu}"
+                        FontSize="22" FontWeight="Bold"/>
+
+                        <Label  Content=","  Margin="-7 0 0 0"
+                        FontSize="22" FontWeight="Bold"/>
+
+                        <Label Content="{Binding Car.BuraxlisIli}"
+                        FontSize="22" FontWeight="Bold"/>
+
+                        <Label  Content=","  Margin="-7 0 0 0"
+                        FontSize="22" FontWeight="Bold"/>
+
+                        <Label Content="{Binding Car.Yurus}"
+                        FontSize="22" FontWeight="Bold"/>
+
+
+
+
+
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                        
+                        <Button
+                            Background="Transparent"
+                            HorizontalAlignment="Left"
+                            BorderThickness="0"
+                            
+                            Width="140"
+                            Height="20"
+                            Padding="0"
+                            Template="{DynamicResource ButtonRedForgronud}"
+                            >
+
+                            <Grid>
+
+                                <TextBlock Margin="20 0 0 0" Name="TextBox"   Text="Seçilmişlərdə saxla"></TextBlock>
+                                <Mt:PackIcon 
+                                    
+                                    Kind="CardsHeartOutline" 
+                                    Margin="0 2 0 0" 
+                                    
+                                    />
+
+                            </Grid>
+                            
+                        </Button>
+
+                        <Button
+                            Background="Transparent"
+                            HorizontalAlignment="Left"
+                            BorderThickness="0"
+                            
+                            Width="140"
+                            Height="20"
+                            Padding="0"
+                            Template="{DynamicResource ButtonRedForgronud}"
+                            >
+
+                            <Grid>
+
+                                <TextBlock Margin="20 0 0 0"  Text="Şikayət et"></TextBlock>
+                                <Mt:PackIcon 
+                                    
+                                    Kind="FlagVariantOutline" 
+                                    Margin="0 2 0 0" 
+                                    
+                                    />
+
+                            </Grid>
+
+                        </Button>
+
+
+
+
+                    </StackPanel>
+                    
+                </Grid>
+
+
+                <StackPanel Margin="0 20 0 0" Orientation="Horizontal" >
+
+                    <Button 
+                    
+                    Height="520"
+                    Width="520"
+                    BorderThickness="0"
+                    HorizontalAlignment="Left"
+                        
+                    Command="{Binding ImageDeyisCommand}"   
+                    CommandParameter="{Binding ElementName=ImageCar}"
+                        
+                    >
+
+                        <Button.Background>
+
+                            <ImageBrush x:Name="ImageCar" ImageSource="{Binding Image}">
+
+                            </ImageBrush>
+
+                        </Button.Background>
+
+
+                    </Button>
+
+                    <StackPanel Margin="30 0 0 0" 
+                                Background="#ebedf3"
+                                Width="310"
+                                Height="300"
+                                VerticalAlignment="Top"
+                                >
+                        <StackPanel Margin="7 7 0 0" Orientation="Horizontal">
+                            <Label 
+                                Content="{Binding Car.Qimet}"
+                              
+                                FontSize="20"
+                                Foreground="Black"
+                                Margin="10 10 0 0"
+                                FontWeight="DemiBold"
+                                
+                                />
+                            <Label 
+                                Content="{Binding Car.PulVahidi}"
+                              
+                                FontSize="20"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="Bold"
+                                
+                                />
+
+                        </StackPanel>
+                        <Grid Margin="7 50 7 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <StackPanel>
+                                <Label 
+                                Content="{Binding Car.Elaqe.Ad}"
+                              
+                                FontSize="15"
+                                Foreground="Black"
+                                Margin="10 10 0 0"
+                                FontWeight="DemiBold"
+                                
+                                />
+                                <Label 
+                                Content="{Binding Car.Elaqe.Seher}"
+                              
+                                FontSize="15"
+                                Foreground="#666666"
+                                Margin="10 -5 0 0"
+                                FontWeight="DemiBold"
+                                
+                                />
+                            </StackPanel>
+
+                            <Border 
+                                
+                                Grid.Column="1"
+                                
+                                HorizontalAlignment="Right"
+                                Height="50"
+                                Width="50"
+                                
+                                Margin="0 0 20 0"
+                                >
+                                <Border.Background>
+                                    <ImageBrush ImageSource="../../Images/df.png">
+                                        
+                                    </ImageBrush>
+                                </Border.Background>
+                            </Border>
+                            
+                        </Grid>
+                        <Button
+                            Margin="0 30 0 0"
+                            Background="Transparent"
+                            Template="{DynamicResource ButtonGreenForgronud}"
+                            Width="270"
+                            Height="80"
+                         
+                            
+                            >
+
+                            <StackPanel  Width="200" Margin="0 2 0 0">
+                                <Label 
+                                Content="Nömrə göstər"
+                              
+                                FontSize="15"
+                                Foreground="White"
+                                Margin="45 10 0 0"
+                                FontWeight="DemiBold"
+                                
+                                />
+                                <Grid Margin="15 0 0 0">
+                                    <Mt:PackIcon Kind="Phone" 
+                                     Margin="0 0 40 0"
+                                     Height="30"
+                                     Width="30"
+                                     />
+                                    <TextBlock 
+                                        FontSize="18"
+                                    Text="{Binding Car.Elaqe.Telefon}" 
+                                    VerticalAlignment="Center" 
+                                    Margin="35 0 0 0" />    
+                                </Grid>
+
+
+                            </StackPanel>
+                            
+                        </Button>
+
+                        
+                    </StackPanel>
+                    
+                    
+                    
+                </StackPanel>
+
+                <StackPanel Margin="0 50 0 0">
+
+
+                    <Grid Width="600" HorizontalAlignment="Left">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        
+                    
+                        <Label 
+                                Content="Şəhər"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
+                        <Label 
+                                Content="{Binding Car.Seher}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="1"
+                                />
+                        <Label 
+                                Content="Sürətlər qutusu"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="2"
+                                />
+                        <Label 
+                                Content="{Binding Car.SuretQutusu}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="3"
+                                />
+
+                    </Grid>
+
+                    <Grid Width="600" HorizontalAlignment="Left">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Label 
+                                Content="Marka"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
+                        <Label 
+                                Content="{Binding Car.Marka}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="1"
+                                />
+                        <Label 
+                                Content="Ötürücü"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="2"
+                                />
+                        <Label 
+                                Content="{Binding Car.Otrucu}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="3"
+                                />
+
+                    </Grid>
+
+                    <Grid Width="600" HorizontalAlignment="Left">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Label 
+                                Content="Model"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
+                        <Label 
+                                Content="{Binding Car.Model}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="1"
+                                />
+                        <Label 
+                                Content="Yeni"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="2"
+                                />
+                        <Label 
+                                Content="{Binding Yeni}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="3"
+                                />
+
+                    </Grid>
+
+                    <Grid Width="600" HorizontalAlignment="Left">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Label 
+                                Content="Buraxılış ili"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
+                        <Label 
+                                Content="{Binding Car.BuraxlisIli}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="1"
+                                />
+                        <Label 
+                                Content="Yerlərin sayı"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="2"
+                                />
+                        <Label 
+                                Content="{Binding Car.YreSayi}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="3"
+                                />
+
+                    </Grid>
+
+                    <Grid Width="600" HorizontalAlignment="Left">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Label 
+                                Content="Ban növü"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
+                        <Label 
+                                Content="{Binding Car.BanNovu}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="1"
+                                />
+                        <Label 
+                                Content="Sahiblər"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="2"
+                                />
+                        <Label 
+                                Content="{Binding Car.NecenciSahib}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="3"
+                                />
+
+                    </Grid>
+
+                    <Grid Width="600" HorizontalAlignment="Left">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Label 
+                                Content="Rəng"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
+                        <Label 
+                                Content="Yoxdu"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="1"
+                                />
+                        <Label 
+                                Content="Vəziyyəti"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="2"
+                                />
+                        <Label 
+                                Content="{Binding Vezyet}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="3"
+                                />
+
+                    </Grid>
+
+                    <Grid Width="400" HorizontalAlignment="Left">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="*"/>
+                            
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Label 
+                                Content="Mühərrik"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
+
+
+
+                        <StackPanel Orientation="Horizontal" Grid.Column="1">
+                            <Label 
+                                Content="{Binding Car.MuherikGucu}"
+                              
+                                HorizontalAlignment="Left"
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                
+                                />
+                            <Label 
+                                Content="/"
+                              
+                                HorizontalAlignment="Left"
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                               
+                                />
+                            <Label 
+                                Content="{Binding Car.YanacaqNovu}"
+                              
+                                HorizontalAlignment="Left"
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                              
+                                />
+
+                        </StackPanel>
+                        
+                        
+
+                    </Grid>
+
+                    <Grid Width="300" HorizontalAlignment="Left">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                         
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Label 
+                                Content="Yürüş"
+                              
+                                FontSize="18"
+                                Foreground="#8C8C8C"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="0"
+                                />
+                        <Label 
+                                Content="{Binding Car.Yurus}"
+                              
+                                FontSize="18"
+                                Foreground="Black"
+                                Margin="0 10 0 0"
+                                FontWeight="DemiBold"
+                                Grid.Column="1"
+                                />
+                      
+
+                    </Grid>
+
+
+
+                </StackPanel>
+                
+            
+                
+            
+            
+            </StackPanel>
+
+        </ScrollViewer>
+
+
+
+
+
+
+    </Grid>
+</Page>

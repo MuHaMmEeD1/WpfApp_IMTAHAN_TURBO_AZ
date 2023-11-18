@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\df.png" />
+    <None Remove="Images\dfCar.png" />
     <None Remove="Images\foto1.1.png" />
     <None Remove="Images\foto1.png" />
     <None Remove="Images\foto10.1.png" />
@@ -30,7 +32,7 @@
     <None Remove="Images\foto18.png" />
     <None Remove="Images\foto19.1.png" />
     <None Remove="Images\foto19.png" />
-    <None Remove="Images\foto2.2.png" />
+    <None Remove="Images\foto2.1.png" />
     <None Remove="Images\foto2.png" />
     <None Remove="Images\foto20.1.png" />
     <None Remove="Images\foto20.png" />
@@ -51,6 +53,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Images\df.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dfCar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\foto19.1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\foto19.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\foto3.1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\foto3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\foto6.1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -120,10 +140,7 @@
     <Content Include="Images\foto18.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\foto19.1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\foto2.2.png">
+    <Content Include="Images\foto2.1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\foto2.png">
@@ -133,9 +150,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\foto20.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\foto3.1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\foto4.1.png">

@@ -105,6 +105,8 @@
                 HorizontalAlignment="Left"
                 BorderThickness="0"
                 
+                Command="{Binding TapAzCommand}"
+                
                     Template="{DynamicResource ButtonRedForgronud}"
                 
                 >
@@ -125,6 +127,8 @@
                 HorizontalAlignment="Left"
                 BorderThickness="0"
                 
+                Command="{Binding BinaAzCommand}"
+                
                     Template="{DynamicResource ButtonRedForgronud}"
                 
                 >
@@ -143,6 +147,8 @@
                 Margin="465 2 0 0"
                 HorizontalAlignment="Left"
                 BorderThickness="0"
+                
+                Command="{Binding BossAzCommand}"
                 
                     Template="{DynamicResource ButtonRedForgronud}" 
                 
@@ -308,6 +314,10 @@
                 FontSize="16"
                 FontWeight="Bold" 
                 Foreground="White"
+                
+                Command="{Binding ButunElanlarCommand}"
+                CommandParameter="{Binding ElementName=Base}"
+                
                 >
 
 
@@ -326,7 +336,9 @@
                 BorderThickness="0"
                 Foreground="#FCFCFC"
                     
-                    
+                Command="{Binding ButunElanlarCommand}"
+                CommandParameter="{Binding ElementName=Base}"
+                
                     Template="{DynamicResource ButtonOpesydeForgronud}" 
                 
                 >
@@ -375,7 +387,7 @@
 
             <Button 
                 
-                 
+                    
                 
                     Width="87"
                     Height="32"
@@ -386,11 +398,12 @@
                     BorderThickness="0"
                     Template="{DynamicResource ButtonGreenForgronud}"
                     Command="{Binding YeniElanCommand}"
-                   
+                    CommandParameter="{Binding ElementName=Base}"
             >
                 <Grid>
                     <Mt:PackIcon Kind="PlusCircleOutline" Margin="0 2 0 0" />
                     <TextBlock 
+                        Name="YeniElanTextBlock"
                         Text="Yeni elan" 
                         VerticalAlignment="Center" 
                         Margin="19 0 0 0" />
@@ -412,10 +425,12 @@
 
 
         <Frame 
+            x:Name="EsasSeyfe"
+            
             Height="1000" 
             VerticalAlignment="Top" 
             Margin="0 85 0 0" 
-            Source="HomeView.xaml"/>
+            />
 
         <usercontrols:Button_ComboBox
                     

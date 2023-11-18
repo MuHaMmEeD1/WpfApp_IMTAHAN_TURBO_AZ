@@ -7,7 +7,7 @@
         xmlns:Mt="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:usercontrols="clr-namespace:WpfApp_IMTAHAN_TURBO_AZ.UserControls"
                   mc:Ignorable="d"
         Title="TurboAz" Height="Auto" Width="Auto" WindowState="Maximized"
-                  ShowsNavigationUI="False" d:DesignHeight="600" d:DesignWidth="1600"
+                  ShowsNavigationUI="False" d:DesignHeight="600" d:DesignWidth="1500"
                   
                   >
 

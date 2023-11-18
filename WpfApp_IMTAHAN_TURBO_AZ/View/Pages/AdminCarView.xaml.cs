@@ -12,24 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages;
 
 namespace WpfApp_IMTAHAN_TURBO_AZ.View.Pages
 {
     /// <summary>
-    /// Interaction logic for MainPageView.xaml
+    /// Interaction logic for AdminCarView.xaml
     /// </summary>
-    public partial class MainPageView : Page
+    public partial class AdminCarView : Page
     {
-        public MainPageView()
+        public AdminCarView()
         {
             InitializeComponent();
-
-           
-
-            EsasSeyfe.Content = new HomeView(EsasSeyfe);
-
-            DataContext = new MainPageViewModel();
         }
     }
 }

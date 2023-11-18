@@ -42,7 +42,7 @@
             HorizontalContentAlignment="Center"
             Width="{Binding ElementName=Base, Path=Width}"
           
-            MouseLeave="btn_MouseLeave"
+            MouseLeave="btn_MouseLeave" SelectionChanged="listbox_SelectionChanged"
            
             >
 
@@ -50,7 +50,7 @@
             
                     Background="Transparent"
                     BorderThickness="0"
-                    Content="Aksesuarlar" Foreground="Black"
+                    Content="Aksesuarlar" Foreground="Black" Click="Button_Click"
             >
             </Button>
 
@@ -58,7 +58,7 @@
             
                     Background="Transparent"
                     BorderThickness="0"
-                    Content="Audio və video texnika" Foreground="Black"
+                    Content="Audio və video texnika" Foreground="Black" Click="Button_Click_1"
             >
             </Button>
 
@@ -66,7 +66,7 @@
             
                     Background="Transparent"
                     BorderThickness="0"
-                    Content="Avtokosmetika ve avtokimya" Foreground="Black"
+                    Content="Avtokosmetika ve avtokimya" Foreground="Black" Click="Button_Click_2"
             >
             </Button>
 
@@ -75,7 +75,7 @@
             
                     Background="Transparent"
                     BorderThickness="0"
-                    Content="Ehtiyat hisselr" Foreground="Black"
+                    Content="Ehtiyat hisselr" Foreground="Black" Click="Button_Click_3"
             >
             </Button>
 
@@ -83,7 +83,7 @@
             
                     Background="Transparent"
                     BorderThickness="0"
-                    Content="GPS navigatorlar" Foreground="Black"
+                    Content="GPS navigatorlar" Foreground="Black" Click="Button_Click_4"
             >
             </Button>
 
@@ -91,7 +91,7 @@
             
                     Background="Transparent"
                     BorderThickness="0"
-                    Content="Qeydiyyat nişanları" Foreground="Black"
+                    Content="Qeydiyyat nişanları" Foreground="Black" Click="Button_Click_5"
             >
             </Button>
 
@@ -99,7 +99,7 @@
             
                     Background="Transparent"
                     BorderThickness="0"
-                    Content="Siqnalizasiyalar" Foreground="Black"
+                    Content="Siqnalizasiyalar" Foreground="Black" Click="Button_Click_6"
             >
             </Button>
 
@@ -109,7 +109,7 @@
                     Background="Transparent"
                     BorderThickness="0"
                     Content="Şinlər, diskləl və təkərlər"
-                    Foreground="Black"  
+                    Foreground="Black" Click="Button_Click_7"  
             >
             </Button>
 
@@ -118,7 +118,7 @@
                     Background="Transparent"
                     BorderThickness="0"
                     Content="Digər"
-                    Foreground="Black"
+                    Foreground="Black" Click="Button_Click_8"
             >
             </Button>
 

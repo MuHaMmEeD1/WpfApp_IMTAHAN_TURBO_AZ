@@ -1,8 +1,8 @@
 [
   {
-    "Seher": "Bakı",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Bak\u0131",
+    "Marka": "Toyota",
+    "Model": "Camry",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -13,7 +13,7 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 25000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
@@ -29,19 +29,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
+    "PulVahidi": "AZN",
     "Beyen": true,
-    "Vip": true,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 0
+    "ElanIndex": 0,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Bakı",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Sumqay\u0131t",
+    "Marka": "Honda",
+    "Model": "CR-V",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -52,15 +54,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 14000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto2.png",
+      "Images/foto2.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto2.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -68,19 +70,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 1
+    "ElanIndex": 1,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Ming\u0259\u00E7evir",
+    "Marka": "Ford",
+    "Model": "Focus",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -91,15 +95,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 28000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto3.png",
+      "Images/foto3.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto3.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -107,19 +111,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
+    "PulVahidi": "AZN",
     "Beyen": true,
-    "Vip": true,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 2
+    "ElanIndex": 2,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Xa\u00E7maz",
+    "Marka": "Chevrolet",
+    "Model": "Malibu",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -130,15 +136,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 19000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto4.png",
+      "Images/foto4.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto4.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -146,19 +152,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 3
+    "ElanIndex": 3,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "G\u0259nc\u0259",
+    "Marka": "Mercedes-Benz",
+    "Model": "S-Class",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -169,15 +177,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 8000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto5.png",
+      "Images/foto5.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto5.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -185,19 +193,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 4
+    "ElanIndex": 4,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "G\u0259nc\u0259",
+    "Marka": "BMW",
+    "Model": "3 Series",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -208,15 +218,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 32000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto6.png",
+      "Images/foto6.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto6.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -224,19 +234,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 5
+    "ElanIndex": 5,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Sumqay\u0131t",
+    "Marka": "Audi",
+    "Model": "A3",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -247,15 +259,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 17000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto7.png",
+      "Images/foto7.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto7.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -263,19 +275,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 6
+    "ElanIndex": 6,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Sumqay\u0131t",
+    "Marka": "Tesla",
+    "Model": "Model S",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -286,15 +300,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 55000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto8.png",
+      "Images/foto8.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto8.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -302,19 +316,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 7
+    "ElanIndex": 7,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Quba",
+    "Marka": "Nissan",
+    "Model": "Maxima",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -325,15 +341,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 72000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto9.png",
+      "Images/foto9.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto9.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -341,19 +357,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 8
+    "ElanIndex": 8,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Quba",
+    "Marka": "Hyundai",
+    "Model": "Elantra",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -364,15 +382,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 24000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto10.png",
+      "Images/foto10.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto10.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -380,19 +398,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 9
+    "ElanIndex": 9,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Naftalan",
+    "Marka": "Honda",
+    "Model": "Accord",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -403,15 +423,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 20500,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto11.png",
+      "Images/foto11.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto11.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -419,19 +439,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 10
+    "ElanIndex": 10,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "\u015Eamax\u0131",
+    "Marka": "Honda",
+    "Model": "Accord",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -442,15 +464,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 28000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto12.png",
+      "Images/foto12.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto12.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -458,19 +480,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 11
+    "ElanIndex": 11,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Ming\u0259\u00E7evir",
+    "Marka": "BMW",
+    "Model": "7 Series",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -481,15 +505,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 33500,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto13.png",
+      "Images/foto13.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto13.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -497,19 +521,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 12
+    "ElanIndex": 12,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "\u0130smay\u0131ll\u0131",
+    "Marka": "Nissan",
+    "Model": "Altima",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -520,15 +546,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 27000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto14.png",
+      "Images/foto14.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto14.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -536,19 +562,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 13
+    "ElanIndex": 13,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Bak\u0131",
+    "Marka": "Ford",
+    "Model": "Mustang",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -559,15 +587,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 16500,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto15.png",
+      "Images/foto15.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto15.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -575,19 +603,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 14
+    "ElanIndex": 14,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "\u015E\u0259ki",
+    "Marka": "Toyota",
+    "Model": "Camry",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -598,15 +628,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 75000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto16.png",
+      "Images/foto16.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto16.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -614,19 +644,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 15
+    "ElanIndex": 15,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Sumqay\u0131t",
+    "Marka": "Mercedes-Benz",
+    "Model": "C-Class",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -637,15 +669,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 37000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto17.png",
+      "Images/foto17.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto17.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -653,19 +685,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 16
+    "ElanIndex": 16,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Yevlax",
+    "Marka": "Honda",
+    "Model": "Civic",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -676,15 +710,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 22000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto18.png",
+      "Images/foto18.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto18.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -692,19 +726,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 17
+    "ElanIndex": 17,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Bak\u0131",
+    "Marka": "Hyundai",
+    "Model": "Sonata",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -715,15 +751,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 62300,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto19.png",
+      "Images/foto19.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto19.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -731,19 +767,21 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
-    "Beyen": true,
-    "Vip": true,
+    "PulVahidi": "AZN",
+    "Beyen": false,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 18
+    "ElanIndex": 18,
+    "HeartCommand": null,
+    "KecCommand": null
   },
   {
-    "Seher": "Baki",
-    "Marka": "Lada",
-    "Model": "Lada12",
+    "Seher": "Quba",
+    "Marka": "Audi",
+    "Model": "A6",
     "BuraxlisIli": "2020",
     "BanNovu": "Masin",
     "Reng": "Sari",
@@ -754,15 +792,15 @@
     "Yeni": true,
     "YreSayi": 3,
     "Veziyyet": 2,
-    "Qimet": 44000,
+    "Qimet": 29000,
     "NecenciSahib": 3,
     "ElaveMelumat": "Super",
     "AvSecimler": "Y\u00FCng\u00FCl lehimli diskl\u0259rABSLyukYa\u011F\u0131\u015F sensoruM\u0259rk\u0259zi qapanmaPark radar\u0131",
     "Images": [
-      "Images/foto1.png",
-      "Images/foto1.1.png"
+      "Images/foto20.png",
+      "Images/foto20.1.png"
     ],
-    "PImage": "Images/foto1.png",
+    "PImage": "Images/foto20.png",
     "Elaqe": {
       "Ad": "Ad",
       "Seher": "Sumqayit",
@@ -770,13 +808,15 @@
       "Telefon": "(012) 505-77-55\r\n"
     },
     "VIN_Kod": "HJ2K1OS9",
-    "PulVahidi": "AZE",
+    "PulVahidi": "AZN",
     "Beyen": true,
-    "Vip": true,
+    "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
     "MuherikGucu": 3,
     "YanacaqNovu": "Bezin",
-    "ElanIndex": 19
+    "ElanIndex": 19,
+    "HeartCommand": null,
+    "KecCommand": null
   }
 ]

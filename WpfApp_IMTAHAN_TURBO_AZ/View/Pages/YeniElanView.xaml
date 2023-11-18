@@ -1,0 +1,1106 @@
+﻿<Page x:Class="WpfApp_IMTAHAN_TURBO_AZ.View.Pages.YeniElanView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp_IMTAHAN_TURBO_AZ.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="2000" d:DesignWidth="1000"
+      Title="YeniElanView" Background="White" Name="Base">
+
+    <Grid>
+        <Grid.Resources>
+
+            <ControlTemplate TargetType="Button" x:Key="ButtonRedForgronud">
+                <Border CornerRadius="5">
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" Value="#ca1016" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#960C11" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+            </ControlTemplate>
+
+        </Grid.Resources>
+
+
+
+
+        <ScrollViewer>
+
+            <StackPanel 
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Width="880"
+            Height="2000"
+            >
+
+                <Label Background="#ebedf3"
+                   Height="60"
+                   Content="ELAN YERLƏŞDİRMƏK"
+                   FontWeight="DemiBold"
+                   FontSize="17"
+                   Padding="40 20 0 0"
+                   
+                   
+                   ></Label>
+                <StackPanel Margin="20 0 0 0" >
+
+
+                    <TextBlock Margin="5 20 0 0" Text="Üç ay ərzində bir nəqliyyat vasitəsi yalnız bir dəfə pulsuz dərc oluna bilər."></TextBlock>
+                    <TextBlock Margin="5 0 0 0" Text="Üç ay ərzində təkrar və ya oxşar elanlar (marka/model, rəng) ödənişlidir."></TextBlock>
+                    <TextBlock Margin="5 0 0 0" Text="Elanınızı saytın ön sıralarında görmək üçün İrəli çək xidmətindən istifadə edin."></TextBlock>
+
+
+                    <Grid Margin="0 20 0 0" Height="25">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                           Content="Marka"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="1"
+                        
+                            Name="MarkaComboBox"
+                            Height="25" 
+                            Width="235" 
+                            ItemsSource="{Binding Markas}"
+                            SelectedItem="{Binding Marka , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Right"
+                               
+                            FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+                            ></ComboBox>
+
+                        <Label Grid.Column="2"
+                           Content="Yanacaq növü"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="3"
+                        
+                            Name="YanacaqNovuComboBox"
+                            Height="25" 
+                            Width="235" 
+                            HorizontalAlignment="Right"
+                            
+                            ItemsSource="{Binding Yanacaq}"
+                            
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                      
+                            
+                            FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+
+                            ></ComboBox>
+
+                    </Grid>
+
+                    <Grid Margin="0 20 0 0" Height="25">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                           Content="Model"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="1"
+                        
+                            Name="ModelComboBox"
+                            Height="25" 
+                            Width="235" 
+                            ItemsSource="{Binding Marka.Models, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}"
+                           
+                            
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Right"
+                               
+                            FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+                            ></ComboBox>
+
+                        <Label Grid.Column="2"
+                           Content="Ötürücü"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="3"
+                        
+                            Name="OtrucuComboBox"
+                            Height="25" 
+                            Width="235" 
+                            HorizontalAlignment="Right"
+                            
+                            ItemsSource="{Binding Oturucu}"
+                            
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                      
+                            FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+
+                            ></ComboBox>
+
+                    </Grid>
+
+                    <Grid Margin="0 20 0 0" Height="25">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                           Content="Ban növü"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="1"
+                        
+                            Name="BanNovuComboBox"
+                            Height="25" 
+                            Width="235" 
+                            ItemsSource="{Binding BNovu, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}"
+                           
+                            
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Right"
+                               
+                        FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+                            ></ComboBox>
+
+                        <Label Grid.Column="2"
+                           Content="Sürətlər qutusu"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="3"
+                        
+                            Name="SuretQutusuComboBox"
+                            Height="25" 
+                            Width="235" 
+                            HorizontalAlignment="Right"
+                            
+                            ItemsSource="{Binding SuretQutusu}"
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                      
+                            FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+
+                            ></ComboBox>
+
+                    </Grid>
+
+                    <Grid Margin="0 20 0 0" Height="25">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                           Content="Yürüş"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="1"
+                        
+                            Name="YurusComboBox"
+                            Height="25" 
+                            Width="235" 
+                            IsEditable="True" 
+                            
+                            
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Right"
+                               
+                        FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+                            ></ComboBox>
+
+                        <Label Grid.Column="2"
+                           Content="İl"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="3"
+                        
+                            Name="IlComboBox"
+                            Height="25" 
+                            Width="235" 
+                            HorizontalAlignment="Right"
+                            
+                            ItemsSource="{Binding Iller}"
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                      
+                            FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+
+                            ></ComboBox>
+
+                    </Grid>
+                    
+                    <Grid Margin="0 20 0 0" Height="25">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                           Content="Rəng"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="1"
+                            Name="RengComboBox"
+                         
+                            Height="25" 
+                            Width="235" 
+                            ItemsSource="{Binding Rengler, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}"
+                           
+                            
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Right"
+                               
+                        FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+                            ></ComboBox>
+
+                        <Label Grid.Column="2"
+                           Content="Mühərrikin həcmi, sm3"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="3"
+                        
+                            Name="MuherikComboBox"
+                            Height="25" 
+                            Width="235" 
+                            HorizontalAlignment="Right"
+                            
+                            ItemsSource="{Binding Muherrik}"
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                      
+                            FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+
+                            ></ComboBox>
+
+                    </Grid>
+
+                    <Grid Margin="0 20 0 0" Height="25">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                           Content="Qiymət"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+
+
+
+                        <StackPanel Orientation="Horizontal" Grid.Column="1">
+                            <ComboBox 
+                            
+                            Grid.Column="1"
+                        
+                            Name="QimetComboBox"
+                            Height="25" 
+                            Width="90" 
+                            
+                            IsEditable="True" 
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Right"
+                               
+                        FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 5 0"
+                            ></ComboBox>
+
+                            <RadioButton Name="QimetAznRB" Content="AZN" IsChecked="True" Padding="3 0 2 0"  Background="#ca1016"/>
+                            <RadioButton Name="QimetUsdRB" Content="USD" Padding="3 0 2 0"  Background="#ca1016"/>
+                            <RadioButton Name="QimetEurRB" Content="EUR" Padding="3 0 2 0"  Background="#ca1016"/>
+
+                        </StackPanel>
+                       
+
+                        <Label Grid.Column="2"
+                           Content="Mühərrikin gücü, a.g."
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="3"
+                        
+                            Name="MuherikGucuComboBox"
+                            Height="25" 
+                            Width="235" 
+                            HorizontalAlignment="Right"
+                            IsEditable="True"
+                            
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                      
+                            FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+
+                            ></ComboBox>
+
+                    </Grid>
+
+                    <Grid Margin="0 20 0 0" Height="25">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                           Content="Neçənci sahibisiniz?"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="1"
+                            Name="NecenciSahibComboBox"
+                            
+                            Height="25" 
+                            Width="235" 
+                            ItemsSource="{Binding NecenciSahib, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}"
+                           
+                            
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Right"
+                               
+                        FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+                            ></ComboBox>
+
+                        <Label Grid.Column="2"
+                           Content="Hansı bazar üçün yığılıb"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <ComboBox 
+                            
+                            Grid.Column="3"
+                            Name="HansiBazarComboBox"
+                            
+                            Height="25" 
+                            Width="235" 
+                            HorizontalAlignment="Right"
+                            ItemsSource="{Binding HansiBazar}"
+                            
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                      
+                            FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+
+                            ></ComboBox>
+
+                    </Grid>
+
+                    <Grid Margin="0 20 0 0" Height="115">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="175"/>
+                            <ColumnDefinition Width="255"/>
+                            <ColumnDefinition Width="350"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                           Content="Vəziyyəti"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <StackPanel Grid.Column="1">
+
+                            <RadioButton
+                                  Name="VuruqvarCheckBox"
+                                  Content="Vuruğu var"
+                                  VerticalAlignment="Top"
+                                  Background="#ca1016"
+                                   IsChecked="True"
+                                  GroupName="vezyet"
+                                
+                                
+                                  />
+                            <Label Margin="20 10 0 0"
+                                   Content="Bir və ya bir neçə detalı dəyişdirilib"
+                                   Padding="5 0 0 0"
+                                   /> 
+                            <Label Margin="20 0 0 0"
+                                   Content="və ya təmir olunub."
+                                   Padding="5 0 0 0"
+                                   />
+
+
+                            <RadioButton
+                                  Margin="0 20 0 0"
+                                  Name="DigerCheckBox"
+                                  Content="Digər"
+                                  VerticalAlignment="Top"
+                                  Background="#ca1016"
+                                  GroupName="vezyet"
+                                  />
+
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2">
+
+                            <RadioButton
+                                  Name="RənglənibCheckBox"
+                                  Content="Rənglənib"
+                                  VerticalAlignment="Top"
+                                  Background="#ca1016"
+                                  GroupName="vezyet"
+                                  />
+                            <Label Margin="20 10 0 0"
+                                   Content="Bir və ya bir neçə detalı rənglənib və ya kosmetik"
+                                   Padding="5 0 0 0"
+                                   />
+                            <Label Margin="20 0 0 0"
+                                   Content="işlər görülüb."
+                                   Padding="5 0 0 0"
+                                  />
+
+                        </StackPanel>
+
+
+
+
+
+
+
+                    </Grid>
+
+                    <Grid Margin="0 20 0 0" Height="30">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="175"/>
+                            <ColumnDefinition Width="*"/>
+                          
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                           Content="Yerlərin sayı"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+
+                            <RadioButton
+                                  Name="Yer_1_CheckBox"
+                                  Content="1"
+                                  VerticalAlignment="Top"
+                                Background="#ca1016"
+                                IsChecked="True"
+                                  />
+                            <RadioButton
+                                  Name="Yer_2_CheckBox"
+                                  Content="2"
+                                  VerticalAlignment="Top"
+                                  Margin="10 0 0 0"
+                                Background="#ca1016"
+                                  />
+                            <RadioButton
+                                  Name="Yer_3_CheckBox"
+                                  Content="3"
+                                  VerticalAlignment="Top"
+                                  Margin="10 0 0 0"
+                                Background="#ca1016"
+                                  />
+                            <RadioButton
+                                  Name="Yer_4_CheckBox"
+                                  Content="4"
+                                  VerticalAlignment="Top"
+                                  Margin="10 0 0 0"
+                                Background="#ca1016"
+                                  />
+                            <RadioButton
+                                  Name="Yer_5_CheckBox"
+                                  Content="5"
+                                  VerticalAlignment="Top"
+                                  Margin="10 0 0 0"
+                                Background="#ca1016"
+                                  />
+                            <RadioButton
+                                  Name="Yer_6_CheckBox"
+                                  Content="6"
+                                  VerticalAlignment="Top"
+                                  Margin="10 0 0 0"
+                                Background="#ca1016"
+                                  />
+                            <RadioButton
+                                  Name="Yer_7_CheckBox"
+                                  Content="7"
+                                  VerticalAlignment="Top"
+                                  Margin="10 0 0 0"
+                                Background="#ca1016"
+                                  />
+                            <RadioButton
+                                  Name="Yer_8_CheckBox"
+                                  Content="8+"
+                                  VerticalAlignment="Top"
+                                  Margin="10 0 0 0"
+                                Background="#ca1016"
+                                  />
+                            <RadioButton
+                                  Name="Yer_QeydOlunmasin_CheckBox"
+                                  Content="Qeyd olunmasın"
+                                  VerticalAlignment="Top"
+                                  Margin="5 0 0 0"
+                                Background="#ca1016"
+                                  />
+
+
+
+
+
+
+                        </StackPanel>
+
+                        
+
+
+
+
+
+
+
+                    </Grid>
+
+                    <Grid Margin="0 20 0 0" Height="115">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="175"/>
+                            <ColumnDefinition Width="*"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                           Content="Əlavə məlumat"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+
+                        <TextBox
+                            x:Name="ElaveMelumatTextBox"
+                            
+                            Grid.Column="1"
+                            VerticalScrollBarVisibility="Auto"
+                            AcceptsReturn="True"
+                            AcceptsTab="True"
+                            TextWrapping="Wrap" 
+                            BorderThickness="1"
+                           
+                            
+                            />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </Grid>
+
+                    <StackPanel Margin="0 15 0 0">
+
+                        <Label
+                           Content="Avtomobilin təchizatı"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           FontSize="20"
+                           FontWeight="DemiBold"
+                            
+                           />
+                        
+                        <Grid Margin="0 20 0 0" Height="25">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <CheckBox Grid.Column="0" Content="Yüngül lehimli disklər"
+                                      VerticalAlignment="Top" 
+                                      Name="A1" Background="#ca1016"/>
+                            <CheckBox Grid.Column="1" Content="ABS"
+                                      VerticalAlignment="Top" 
+                                      Name="A2" Background="#ca1016"/>
+                            <CheckBox Grid.Column="2" Content="Lyuk"
+                                      VerticalAlignment="Top" 
+                                      Name="A3" Background="#ca1016"/>
+                            <CheckBox Grid.Column="3" Content="Yağış sensoru"
+                                      VerticalAlignment="Top" 
+                                      Name="A4" Background="#ca1016"/>
+                        </Grid>
+
+                        <Grid Margin="0 0 0 0" Height="25">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <CheckBox Grid.Column="0" Content="Mərkəzi qapanma"
+                                      VerticalAlignment="Top" 
+                                      Name="A5" Background="#ca1016"/>
+                            <CheckBox Grid.Column="1" Content="Park radarı"
+                                      VerticalAlignment="Top" 
+                                      Name="A6" Background="#ca1016"/>
+                            <CheckBox Grid.Column="2" Content="Kondisioner"
+                                      VerticalAlignment="Top" 
+                                      Name="A7" Background="#ca1016"/>
+                            <CheckBox Grid.Column="3" Content="Oturacaqların isidilməsi"
+                                      VerticalAlignment="Top" 
+                                      Name="A8" Background="#ca1016"/>
+                        </Grid>
+
+                        <Grid Margin="0 0 0 0" Height="25">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <CheckBox Grid.Column="0" Content="Dəri salon"
+                                      VerticalAlignment="Top" 
+                                      Name="A9" Background="#ca1016"/>
+                            <CheckBox Grid.Column="1" Content="Ksenon lampalar"
+                                      VerticalAlignment="Top" 
+                                      Name="A10" Background="#ca1016"/>
+                            <CheckBox Grid.Column="2" Content="Arxa görüntü kamerası"
+                                      VerticalAlignment="Top" 
+                                      Name="A11" Background="#ca1016"/>
+                            <CheckBox Grid.Column="3" Content="Yan pərdələr"
+                                      VerticalAlignment="Top" 
+                                      Name="A12" Background="#ca1016"/>
+                        </Grid>
+
+                        <Grid Margin="0 0 0 0" Height="25">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <CheckBox Grid.Column="0" Content="Oturacaqların ventilyasiyası"
+                                      VerticalAlignment="Top" 
+                                      Name="A13" Background="#ca1016"/>
+                           
+                            
+                            
+                        </Grid>
+
+
+                    </StackPanel>
+
+                    <StackPanel Margin="0 15 0 0">
+
+                        
+                   
+                        <StackPanel Orientation="Horizontal">
+
+                            <Label
+                           Content="Şəkillər"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           FontSize="20"
+                           FontWeight="DemiBold"
+                            
+                           />
+
+
+                        </StackPanel>
+
+
+                        <StackPanel Margin="0 20 0 0" Height="200" Orientation="Horizontal">
+
+                            <Button 
+                                x:Name="Image1"
+                                Height="200"
+                                Width="200"
+                                BorderThickness="0"
+                                Content="b1"
+                                Foreground="Transparent"
+                                
+                                Command="{Binding FotoCommand}"
+                                CommandParameter="{Binding ElementName=Image1}"
+                                >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="../../Images/dfCar.png"/>
+                                </Button.Background>
+                                
+                                
+                            </Button>
+
+                            <Button 
+                                x:Name="Image2"
+                                Height="200"
+                                Width="200"
+                                BorderThickness="0"
+                                Margin="10 0 0 0"
+                                Content="b2"
+                                Foreground="Transparent"
+                                
+                                Command="{Binding FotoCommand}"
+                                CommandParameter="{Binding ElementName=Image2}"
+                                >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="../../Images/dfCar.png"/>
+                                </Button.Background>
+
+
+                            </Button>
+
+                            <Button 
+                                x:Name="Image3"
+                                Height="200"
+                                Width="200"
+                                BorderThickness="0"
+                                Margin="10 0 0 0"
+                                Content="b3"
+                                Foreground="Transparent"
+                                
+                                Command="{Binding FotoCommand}"
+                                CommandParameter="{Binding ElementName=Image3}"
+                                >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="../../Images/dfCar.png"/>
+                                </Button.Background>
+
+
+                            </Button>
+
+                            <Button 
+                                x:Name="Image4"
+                                Height="200"
+                                Width="200"
+                                BorderThickness="0"
+                                Margin="10 0 0 0"
+                                Content="b4"
+                                Foreground="Transparent"
+                                
+                                Command="{Binding FotoCommand}"
+                                CommandParameter="{Binding ElementName=Image4}"
+                                >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="../../Images/dfCar.png"/>
+                                </Button.Background>
+
+
+                            </Button>
+
+
+
+                        </StackPanel>
+
+
+                    </StackPanel>
+
+                    <StackPanel Margin="0 15 0 0">
+
+
+
+                        <Label
+                        Content="Əlaqə"
+                        HorizontalAlignment="Left"
+                        HorizontalContentAlignment="Left"
+                        FontSize="20"
+                        FontWeight="DemiBold"
+                            
+                        />
+                        <TextBlock Margin="5 0 0 0" Foreground="DarkGray" Text="Elan dərc olunduqdan sonra əlaqə məlumatları ilə bağlı heç bir dəyişiklik həyata keçirilmir."></TextBlock>
+
+                        <Grid Margin="0 10 0 0" Height="25">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="3*"/>
+                                
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                           Content="Adınız"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                            <ComboBox 
+                            
+                            Grid.Column="1"
+                            
+                            Name="ElaqeAdComboBox"
+                            Height="25" 
+                            Width="235" 
+                            IsEditable="True"
+                                
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Left"
+                               
+                        FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+                            ></ComboBox>
+
+                         
+                        </Grid>
+
+                        <Grid Margin="0 10 0 0" Height="25">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="3*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                           Content="Şəhər"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                            <ComboBox 
+                            
+                            Grid.Column="1"
+                        
+                            Name="ElaqeSeherComboBox"
+                            Height="25" 
+                            Width="235" 
+                            ItemsSource="{Binding Seherler}"
+                           
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Left"
+                               
+                        FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+                            ></ComboBox>
+
+
+                        </Grid>
+
+                        <Grid Margin="0 10 0 0" Height="25">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="3*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                           Content="E-mail"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                            <ComboBox 
+                            
+                            Grid.Column="1"
+                        
+                            Name="ElaqeEmailComboBox"
+                            Height="25" 
+                            Width="235" 
+                            IsEditable="True"
+                                
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Left"
+                               
+                        FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0"
+                            ></ComboBox>
+
+
+                        </Grid>
+
+                        <Grid Margin="0 10 0 0" Height="25">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="3*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                           Content="Telefon nömrəsi"
+                           HorizontalAlignment="Left"
+                           HorizontalContentAlignment="Left"
+                           />
+                            <ComboBox 
+                            
+                            Grid.Column="1"
+                        
+                            Name="ElaqeTelefonComboBox"
+                            Height="25" 
+                            Width="235" 
+                            IsEditable="True"
+                          
+                            Style="{StaticResource MaterialDesignFilledComboBox}"
+                            HorizontalAlignment="Left"
+                               
+                        FontSize="8"
+                            Padding="5 0 5 5"
+                            BorderThickness="1"
+                            Background="White"
+                            BorderBrush="DarkGray"
+                            Margin="0 0 20 0" 
+                            ></ComboBox>
+
+
+                        </Grid>
+
+                        <Grid Margin="0 10 0 0" Height="30">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="3*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Button Template="{DynamicResource ButtonRedForgronud}"
+                                    Command="{Binding DevametCommand}"
+                                    CommandParameter="{Binding ElementName= Base}"
+                                    
+                                    Grid.Column="1"
+                                    Width="235"
+                                    HorizontalAlignment="Left"
+                                    Content="Davam et"
+                                    Padding="0 0 0 7"
+                                    />
+
+
+                        </Grid>
+                        
+                    </StackPanel>
+
+
+                </StackPanel>
+            </StackPanel>
+            
+        </ScrollViewer>
+
+
+    </Grid>
+</Page>

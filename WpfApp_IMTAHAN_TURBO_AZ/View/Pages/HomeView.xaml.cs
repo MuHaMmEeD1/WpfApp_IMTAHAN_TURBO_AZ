@@ -16,16 +16,14 @@ using WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages;
 
 namespace WpfApp_IMTAHAN_TURBO_AZ.View.Pages
 {
-    /// <summary>
-    /// Interaction logic for Home.xaml
-    /// </summary>
+
     public partial class HomeView : Page
     {
-        public HomeView()
+        public HomeView(Frame Base)
         {
 
-
-            DataContext = new HomeViewModel();
+            
+            DataContext = new HomeViewModel(Base);
 
             InitializeComponent();
 
@@ -33,9 +31,6 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.View.Pages
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //MessageBox.Show("bax23");
-        }
+    
     }
 }

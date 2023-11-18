@@ -9,7 +9,7 @@
       
       mc:Ignorable="d" 
       d:DesignHeight="1000" d:DesignWidth="1800"
-      Title="Home" Background="#ebedf3">
+      Title="Home" Background="#ebedf3" Name="Base">
 
     <Grid>
 
@@ -42,7 +42,7 @@
         <ScrollViewer>
 
 
-            <Grid Height="{Binding Uzunluq}">
+            <StackPanel >
 
 
                 
@@ -58,6 +58,7 @@
 
                         <ComboBox 
                             
+                            Name="MarkaComboBox"
                             Height="50" 
                             Width="190" 
                             ItemsSource="{Binding Markas}"
@@ -78,6 +79,7 @@
 
                         <ComboBox 
                             
+                            Name="ModelComboBox"
                             Height="50" 
                             Width="190" 
                             ItemsSource="{Binding Marka.Models, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}"
@@ -94,24 +96,35 @@
                         
                          
                             ></ComboBox>
+                        
+                        
+                       
 
                         <Button
+                            
+                            x:Name="HamsiButton"
                             
                             Height="50"
                             Width="70"
                             BorderThickness="0"
                             Style="{StaticResource MaterialDesignOutlinedButton}"
-                            Foreground="DarkGray"
+                            Foreground="White"
                             
                             Content="Hamısı"                                
-                            Background="White"
+                            Background="#ca1016"
                             Padding="0"
                             Margin="0 0 2 0"
                             
                             FontWeight="Normal"
+                            
+                            Command="{Binding HamsiCommand}"
+                            CommandParameter="{Binding ElementName=Base}"
+                            
+                            
                             ></Button>
 
                         <Button
+                            Name="YeniButton"
                             
                             Height="50"
                             Width="50"
@@ -124,9 +137,13 @@
                             Padding="0"
                             Margin="0 0 2 0"
                             FontWeight="Normal"
+                            
+                            Command="{Binding YeniCommand}"
+                            CommandParameter="{Binding ElementName=Base}"
                             ></Button>
 
                         <Button
+                            Name="SurulmusButton"
                             
                             Height="50"
                             Width="80"
@@ -139,10 +156,14 @@
                             FontWeight="Normal"
                             Padding="0"
 
+                            Command="{Binding SurulmusCommand}"
+                            CommandParameter="{Binding ElementName=Base}"
                             ></Button>
 
 
                         <ComboBox 
+                            
+                            Name="SeherComboBox"
                             
                             Height="50" 
                             Width="190" 
@@ -170,11 +191,11 @@
                         <Grid>
                         
                         <ComboBox 
+                            Name="QimetMinComboBox"
                             
                             Height="50" 
                             Width="95" 
                            
-                            
                             Mt:HintAssist.Hint="Qimət, min."
                             
                             BorderThickness="0"
@@ -197,6 +218,8 @@
 
                             <ComboBox 
                             
+                            Name="QimetMaxComboBox"
+                                
                             Height="50" 
                             Width="95" 
                            
@@ -222,6 +245,8 @@
 
                         <ComboBox 
                             
+                            Name="AznComboBox"
+                            
                             Height="50" 
                             Width="60" 
                             ItemsSource="{Binding Azn}"
@@ -241,6 +266,7 @@
                             ></ComboBox>
 
                         <Button
+                            Name="KreditButton"
                             
                             Height="50"
                             Width="55"
@@ -257,6 +283,7 @@
                             ></Button>
 
                         <Button
+                            Name="BarterButton"
                             
                             Height="50"
                             Width="55"
@@ -273,6 +300,7 @@
                             ></Button>
 
                         <ComboBox 
+                            Name="BanNovuComboBox"
                             
                             Height="50" 
                             Width="202" 
@@ -294,6 +322,7 @@
 
 
                         <ComboBox 
+                            Name="IlMinComboBox"
                             
                             Height="50" 
                             Width="93.5" 
@@ -314,6 +343,7 @@
                             ></ComboBox>
                         
                         <ComboBox 
+                            Name="IlMaxComboBox"
                             
                             Height="50" 
                             Width="93.5" 
@@ -395,6 +425,7 @@
 
                         <Button
                           
+                            
                             Width="140"
                             Height="45"
                             Padding="0"
@@ -409,6 +440,8 @@
                             
                             BorderThickness="0"
                             
+                            Command="{Binding ElanGosterCommand}"
+                            CommandParameter="{Binding ElementName=Base}"
                            
                             >
 
@@ -425,15 +458,16 @@
                 
                 
                  <ListBox 
-                    
+                     Name="ListView"
+                     
                      VerticalAlignment="Top"
-                     ItemsSource="{Binding Cars}"
+                     ItemsSource="{Binding Cars , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                      Width="810"
-                     Margin="0 190 0 0"
+                     Margin="0 20 0 0"
                      >
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <UniformGrid Height="1200" Columns="4"/>
+                            <UniformGrid Columns="4"/>
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
                     <ListBox.ItemTemplate>
@@ -582,6 +616,10 @@
                                 <Button BorderThickness="0"
                                         Height="200"
                                         Width="200" 
+                                        
+                                        Command="{Binding KecCommand}"
+                                        CommandParameter="{Binding ElementName=BT}"
+                                        
                                         Background="Transparent"/>
 
                                 <Button 
@@ -601,14 +639,39 @@
                             
                                     >
                                     <Grid Name="gr1"  >
-                                        <Mt:PackIcon  Name="MtIcon" Width="30" Height="30" Kind="CardsHeartOutline" />
+                                        <Mt:PackIcon BorderThickness="0" Name="MtIcon" Width="30" Height="30" >
+
+                                            <Mt:PackIcon.Style>
+                                                <Style TargetType="Mt:PackIcon">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Beyen}" Value="True">
+                                                            <Setter Property="Foreground" Value="#ca1016"/>
+                                                            <Setter Property="Kind" Value="CardsHeart"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Beyen}" Value="False">
+                                                            <Setter Property="Foreground" Value="White"/>
+                                                            <Setter Property="Kind" Value="CardsHeartOutline"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Mt:PackIcon.Style>
+
+                                        </Mt:PackIcon>
                                         <Label Name="LIndex" Visibility="Hidden" Content="{Binding ElanIndex}"/>
+
+                                        <Grid>
+                                            <Mt:PackIcon BorderThickness="0" Width="30" Height="30" 
+                                                        Kind="CardsHeartOutline" Foreground="White" />
+
+                                        </Grid>
+
+
                                         <Button 
                                                 
                                                 Command="{Binding HeartCommand}"
-                                                CommandParameter="{Binding BT}"
+                                                CommandParameter="{Binding ElementName=BT}"
                                                 Background="Transparent"
-                                                Click="Button_Click"
+                                                BorderThickness="0"
                                             
                                                 ></Button>
                                     </Grid>
@@ -621,11 +684,11 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
 
-        
+                <Grid Height="400"></Grid>
          
         
         
-            </Grid>
+            </StackPanel>
     
         </ScrollViewer>
 

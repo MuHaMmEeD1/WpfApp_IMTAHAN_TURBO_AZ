@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace WpfApp_IMTAHAN_TURBO_AZ.Models
 {
@@ -39,6 +40,7 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.Models
         public int MuherikGucu { get; set; }
         public string? YanacaqNovu { get; set; }
         public int ElanIndex { get; set; }
-
+        public ICommand? HeartCommand { get; set; }  
+        public ICommand? KecCommand { get; set; }  
     }
 }
