@@ -50,6 +50,7 @@
     <None Remove="Images\foto8.png" />
     <None Remove="Images\foto9.1.png" />
     <None Remove="Images\foto9.png" />
+    <None Remove="Images\Icon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -183,6 +184,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\foto9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
