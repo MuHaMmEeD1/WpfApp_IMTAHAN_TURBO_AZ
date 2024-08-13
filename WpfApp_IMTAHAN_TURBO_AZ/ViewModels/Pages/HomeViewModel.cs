@@ -157,6 +157,9 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
         public void _KecCommand(object? par)
         {
 
+
+
+
             int index = 0;
             if (par is Button button)
             {
@@ -171,13 +174,12 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
 
                     index = int.Parse(label!.Content.ToString()!);
 
-
                 }
 
             }
 
             var carView = new CarView();
-            carView.DataContext = new CarViewModel(Cars[index]);
+            carView.DataContext = new CarViewModel(CarsEsas[index]);
 
             Base.Content = carView;
 
@@ -209,7 +211,7 @@ namespace WpfApp_IMTAHAN_TURBO_AZ.ViewModels.Pages
 
 
 
-                    for (int i = 0; i < Cars.Count; i++)
+                    for (int i = 0; i < CarsEsas.Count; i++)
                     {
                         CarsEsas[i].HeartCommand = null;
                         CarsEsas[i].KecCommand = null;

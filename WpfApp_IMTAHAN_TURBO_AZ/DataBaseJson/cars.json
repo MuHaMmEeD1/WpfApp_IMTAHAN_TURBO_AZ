@@ -317,7 +317,7 @@
     },
     "VIN_Kod": "HJ2K1OS9",
     "PulVahidi": "AZN",
-    "Beyen": true,
+    "Beyen": false,
     "Vip": false,
     "PDataTime": "14.11.2023",
     "HBazar": "Az\u0259rbaycan",
